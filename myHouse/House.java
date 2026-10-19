@@ -130,12 +130,18 @@ public class House
     }
 
     /**
-     * Set the home energy rating of the house.
+     * Set the home energy rating of the house. The rating must be
+     * from 1 to 5.
      * @param homeEnergyRating The new rating, from 1 to 5.
      */
     public void setHomeEnergyRating(int homeEnergyRating)
     {
-        this.homeEnergyRating = homeEnergyRating;
+        if(homeEnergyRating >= 1 && homeEnergyRating <= 5) {
+            this.homeEnergyRating = homeEnergyRating;
+        }
+        else {
+            System.out.println("The rating must be from 1 to 5.");
+        }
     }
 
     /**
